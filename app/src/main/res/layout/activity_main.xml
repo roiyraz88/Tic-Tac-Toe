@@ -1,19 +1,166 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main"
     tools:context=".MainActivity">
 
+    <!-- Header -->
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvAppHeader"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="4dp"
+        android:background="#BCBABA"
+        android:text=" TicTacToe"
+        android:textColor="#FDFDFD"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_margin="16dp"
+        android:background="#000000"
+        app:columnCount="3"
+        app:layout_constraintBottom_toTopOf="@+id/messageArea"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAppHeader"
+        app:rowCount="3" >
+
+        <!-- Button 1 -->
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/button_border"
+            android:text=""
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!-- Button 2 -->
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/button_border"
+            android:text=""
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!-- Button 3 -->
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/button_border"
+            android:text=""
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!-- Button 4 -->
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/button_border"
+            android:text=""
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!-- Button 5 -->
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/button_border"
+            android:text=""
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!-- Button 6 -->
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/button_border"
+            android:text=""
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!-- Button 7 -->
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/button_border"
+            android:text=""
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!-- Button 8 -->
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/button_border"
+            android:text=""
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!-- Button 9 -->
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/button_border"
+            android:text=""
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/messageArea"
+        android:layout_width="376dp"
+        android:layout_height="184dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="6dp"
+        android:background="#DDDDDD"
+        android:padding="8dp"
+        android:text="Waiting for Player X's move..."
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.781"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
